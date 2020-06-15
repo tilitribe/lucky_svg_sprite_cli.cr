@@ -1,0 +1,7 @@
+require "lucky"
+require "myhtml"
+require "cadmium_transliterator"
+require "./lucky_svg_sprite_cli/tags/tag"
+require "./lucky_svg_sprite_cli/tags/**"
+require "./lucky_svg_sprite_cli/format"
+require "./lucky_svg_sprite_cli/**"
