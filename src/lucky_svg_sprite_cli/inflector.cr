@@ -11,7 +11,7 @@ module LuckySvgSpriteCli::Inflector
 
   # Convert a given string in to a classified version:
   #
-  # ```crystal
+  # ```
   # Inflector.classify("some-string")
   # # => "SomeString"
   # Inflector.classify("/some/file/path/some-name.svg", from_path: true)
