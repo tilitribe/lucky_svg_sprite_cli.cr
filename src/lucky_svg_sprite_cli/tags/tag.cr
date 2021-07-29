@@ -46,7 +46,7 @@ abstract class LuckySvgSpriteCli::Tag
   def attr_parameters
     params = convert_attributes_to_parameters
     params.push(%(id: "#{format.id_param}")) if format.id_param && depth == 0
-    params.compact.sort_by do |string|
+    params.compact.sort_by! do |string|
       string.gsub(/\"/, "")
     end
   end

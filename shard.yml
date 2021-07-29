@@ -1,10 +1,10 @@
 name: lucky_svg_sprite_cli
-version: 0.1.0
+version: 0.2.0
 
 authors:
-  - wout <wout@mick-wout.com>
+  - wout <hi@wout.codes>
 
-crystal: 0.34.0
+crystal: 1.1.0
 
 dependencies:
   myhtml:
@@ -18,10 +18,10 @@ development_dependencies:
     github: tilishop/spec_mirror.cr
   ameba:
     github: crystal-ameba/ameba
-    version: ~> 0.12
+    version: ~> 0.14.3
   lucky:
     github:  luckyframework/lucky
-    version: ~> 0.21
+    version: ~> 0.28
 
 scripts:
   postinstall: make generator

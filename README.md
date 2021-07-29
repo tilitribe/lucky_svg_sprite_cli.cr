@@ -1,6 +1,4 @@
-# lucky_svg_sprite_cli
-
-TODO: Write a description here
+# lucky_svg_sprite_cli.cr
 
 ## Installation
 
@@ -9,7 +7,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      lucky_svg_sprite_cli:
-       github: your-github-user/lucky_svg_sprite_cli
+       github: tilitribe/lucky_svg_sprite_cli.cr
    ```
 
 2. Run `shards install`
@@ -19,12 +17,6 @@ TODO: Write a description here
 ```crystal
 require "lucky_svg_sprite_cli"
 ```
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
 
 ## Contributing
 
@@ -36,4 +28,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [wout](https://github.com/your-github-user) - creator and maintainer
+- [wout](https://github.com/wout) - creator and maintainer

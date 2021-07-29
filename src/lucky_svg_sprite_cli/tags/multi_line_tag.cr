@@ -7,7 +7,7 @@ class LuckySvgSpriteCli::MultiLineTag < LuckySvgSpriteCli::Tag
   def print_io(io) : IO
     io << padding
     io << method_name
-    if attr_parameters.any?
+    unless attr_parameters.empty?
       io << method_joiner
       io << attr_text
     end
