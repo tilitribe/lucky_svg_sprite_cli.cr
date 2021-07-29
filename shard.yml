@@ -4,7 +4,7 @@ version: 0.2.0
 authors:
   - wout <hi@wout.codes>
 
-crystal: 1.1.0
+crystal: ">=1.0.0"
 
 dependencies:
   myhtml:
@@ -16,10 +16,10 @@ dependencies:
 development_dependencies:
   spec_mirror:
     github: tilishop/spec_mirror.cr
-    version: ~> 0.2.0
+    version: ~> 0.2.1
   ameba:
     github: crystal-ameba/ameba
-    version: ~> 0.14.3
+    version: ~> 0.14
   lucky:
     github:  luckyframework/lucky
     version: ~> 0.28
