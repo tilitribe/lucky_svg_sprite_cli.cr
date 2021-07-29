@@ -6,7 +6,7 @@ require "file_utils"
 require "option_parser"
 require "../src/lucky_svg_sprite_cli"
 
-class GenerateSvgSprite < LuckyCli::Task
+class GenerateSvgSprite < LuckyTask::Task
   summary "Generates a SVG sprite from the available icons for a given set"
   name "gen.svg_sprite"
 
