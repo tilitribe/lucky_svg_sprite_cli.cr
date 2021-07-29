@@ -1,10 +1,14 @@
 name: lucky_svg_sprite_cli
-version: 0.2.0
+version: 0.3.0
 
 authors:
   - wout <hi@wout.codes>
 
 crystal: ">=1.0.0"
+
+targets:
+  lucky.gen.svg_sprite:
+    main: src/lucky_svg_sprite_cli/generator.cr
 
 dependencies:
   myhtml:
