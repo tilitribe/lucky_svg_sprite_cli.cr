@@ -1,5 +1,9 @@
 # lucky_svg_sprite_cli.cr
 
+![GitHub](https://img.shields.io/github/license/tilitribe/lucky_svg_sprite_cli.cr)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/tilitribe/lucky_svg_sprite_cli.cr)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/tilitribe/lucky_svg_sprite_cli.cr/lucky_svg_sprite_cli%20CI)
+
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
