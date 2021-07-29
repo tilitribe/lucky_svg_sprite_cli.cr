@@ -5,4 +5,4 @@ SOURCE_FILE = ./tasks/generate_svg_sprite.cr
 
 generator:
 	$(SHARDS_BIN) build
-	$(CRYSTAL_BIN) build $(SOURCE_FILE) -o ../../bin/$(TARGET_FILE) --release
+	$(CRYSTAL_BIN) build $(SOURCE_FILE) -o ../../bin/$(TARGET_FILE)
