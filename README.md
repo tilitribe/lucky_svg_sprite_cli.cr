@@ -10,11 +10,11 @@ This is the cli backend for the [lucky_svg_sprite.cr](https://github.com/tilitri
 
 1. Add the dependency to your `shard.yml`:
 
-   ```yaml
-   dependencies:
-     lucky_svg_sprite_cli:
-       github: tilitribe/lucky_svg_sprite_cli.cr
-   ```
+```yaml
+dependencies:
+  lucky_svg_sprite_cli:
+    github: tilitribe/lucky_svg_sprite_cli.cr
+```
 
 2. Run `shards install`
 
