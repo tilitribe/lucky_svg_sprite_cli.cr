@@ -1,5 +1,5 @@
 name: lucky_svg_sprite_cli
-version: 0.3.2
+version: 0.3.3
 
 authors:
   - wout <hi@wout.codes>
@@ -19,7 +19,7 @@ dependencies:
 
 development_dependencies:
   spec_mirror:
-    github: tilishop/spec_mirror.cr
+    github: wout/spec_mirror.cr
     version: ~> 0.2.1
   ameba:
     github: crystal-ameba/ameba
