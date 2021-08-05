@@ -1,3 +1,3 @@
 module LuckySvgSpriteCli
-  VERSION = "v0.4.0"
+  VERSION = "0.4.0"
 end
