@@ -118,6 +118,7 @@ class GenerateSvgSprite < LuckyTask::Task
         @strip += attr.split(',')
       end
       parser.on(
+        "-i",
         "--init",
         "Puts all required files and folders in the right places") do
         initial_setup
