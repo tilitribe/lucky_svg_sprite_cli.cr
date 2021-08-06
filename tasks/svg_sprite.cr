@@ -1,16 +1,11 @@
-require "lucky"
-require "lucky_cli"
-require "teeplate"
 require "colorize"
 require "file_utils"
 require "option_parser"
-require "../../src/lucky_svg_sprite_cli"
+require "../src/lucky_svg_sprite_cli"
 
-class Gen::SvgSprite < LuckyTask::Task
-  summary "Generates a SVG sprite from the available icons for a given set"
-  name "gen.svg_sprite"
-
+class Gen::SvgSprite
   @strip = Array(String).new
+  @name : String? = nil
 
   def call
     parse_options
@@ -27,7 +22,7 @@ class Gen::SvgSprite < LuckyTask::Task
   end
 
   private def icon_set_name
-    ARGV.first? || "default"
+    @name || ARGV.first? || "default"
   end
 
   private def base_path
@@ -67,7 +62,7 @@ class Gen::SvgSprite < LuckyTask::Task
     <<-TEXT
 
 
-        Run "lucky gen.svg_sprite #{icon_set_name} -- --init" to set it up
+        Run "bin/svg_sprite --init #{icon_set_name}" to set it up
     TEXT
   end
 
@@ -107,8 +102,9 @@ class Gen::SvgSprite < LuckyTask::Task
   private def parse_options
     OptionParser.parse do |parser|
       parser.on(
-        "--init",
-        "Generates the initial file structure") do
+        "--init NAME",
+        "Generates the initial file structure") do |name|
+        @name = name
         initial_setup
       end
       parser.on(
@@ -132,4 +128,4 @@ class Gen::SvgSprite < LuckyTask::Task
   end
 end
 
-Gen::SvgSprite.new.print_help_or_call(ARGV)
+Gen::SvgSprite.new.call

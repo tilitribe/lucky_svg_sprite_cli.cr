@@ -1,7 +1,7 @@
 CRYSTAL_BIN ?= $(shell which crystal)
 SHARDS_BIN ?= $(shell which shards)
-TARGET_FILE = lucky.gen.svg_sprite
-SOURCE_FILE = ./tasks/gen/svg_sprite.cr
+TARGET_FILE = svg_sprite
+SOURCE_FILE = ./tasks/svg_sprite.cr
 
 generator:
 	$(SHARDS_BIN) build

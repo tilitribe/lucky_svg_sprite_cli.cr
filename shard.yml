@@ -7,7 +7,7 @@ authors:
 crystal: ">=1.0.0"
 
 targets:
-  lucky.gen.svg_sprite:
+  svg_sprite:
     main: src/lucky_svg_sprite_cli/generator.cr
 
 dependencies:
