@@ -4,16 +4,16 @@ require "teeplate"
 require "colorize"
 require "file_utils"
 require "option_parser"
-require "../src/lucky_svg_sprite_cli"
+require "../../src/lucky_svg_sprite_cli"
 
-class GenerateSvgSprite < LuckyTask::Task
+class Gen::SvgSprite < LuckyTask::Task
   summary "Generates a SVG sprite from the available icons for a given set"
   name "gen.svg_sprite"
 
   @strip = Array(String).new
 
   def call
-    parse_options(ARGV)
+    parse_options
     ensure_target_structure
 
     generator = LuckySvgSpriteCli::Generator.new(icon_set_path)
@@ -52,6 +52,7 @@ class GenerateSvgSprite < LuckyTask::Task
 
   private def generate_sprite(generator : LuckySvgSpriteCli::Generator)
     format = LuckySvgSpriteCli::Format.new(strip: @strip)
+
     File.write(sprite_file_name, generator.generate(format))
   end
 
@@ -66,7 +67,7 @@ class GenerateSvgSprite < LuckyTask::Task
     <<-TEXT
 
 
-        Run "lucky gen.svg_sprite #{icon_set_name} --init" to set it up
+        Run "lucky gen.svg_sprite #{icon_set_name} -- --init" to set it up
     TEXT
   end
 
@@ -103,8 +104,13 @@ class GenerateSvgSprite < LuckyTask::Task
     end
   end
 
-  private def parse_options(args)
-    OptionParser.parse(args) do |parser|
+  private def parse_options
+    OptionParser.parse do |parser|
+      parser.on(
+        "--init",
+        "Generates the initial file structure") do
+        initial_setup
+      end
       parser.on(
         "-c",
         "--strip-colors",
@@ -117,12 +123,6 @@ class GenerateSvgSprite < LuckyTask::Task
         "Strips all attributes in given comma-separated list from SVG nodes") do |attr|
         @strip += attr.split(',')
       end
-      parser.on(
-        "-i",
-        "--init",
-        "Puts all required files and folders in the right places") do
-        initial_setup
-      end
     end
   end
 
@@ -132,4 +132,4 @@ class GenerateSvgSprite < LuckyTask::Task
   end
 end
 
-GenerateSvgSprite.new.print_help_or_call(ARGV)
+Gen::SvgSprite.new.print_help_or_call(ARGV)
