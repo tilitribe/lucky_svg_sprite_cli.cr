@@ -91,6 +91,7 @@ describe LuckySvgSpriteCli::Generator do
         class Wind < BaseSvgIcon; end
         class Zap < BaseSvgIcon; end
       end
+
       CODE
 
       format = LuckySvgSpriteCli::Format.new
@@ -134,6 +135,7 @@ describe LuckySvgSpriteCli::Generator do
         class Wind < BaseSvgIcon; end
         class Zap < BaseSvgIcon; end
       end
+
       CODE
 
       format = LuckySvgSpriteCli::Format.new(strip: %w[fill stroke-linecap stroke-linejoin])
