@@ -42,6 +42,7 @@ class LuckySvgSpriteCli::Generator
 
       #{icon_classes.join("\n  ")}
     end
+
     CODE
   end
 end
