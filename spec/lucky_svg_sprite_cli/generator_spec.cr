@@ -86,9 +86,13 @@ describe LuckySvgSpriteCli::Generator do
         end
 
         class Activity < BaseSvgIcon; end
+
         class Command < BaseSvgIcon; end
+
         class Github < BaseSvgIcon; end
+
         class Wind < BaseSvgIcon; end
+
         class Zap < BaseSvgIcon; end
       end
 
@@ -130,9 +134,13 @@ describe LuckySvgSpriteCli::Generator do
         end
 
         class Activity < BaseSvgIcon; end
+
         class Command < BaseSvgIcon; end
+
         class Github < BaseSvgIcon; end
+
         class Wind < BaseSvgIcon; end
+
         class Zap < BaseSvgIcon; end
       end
 
